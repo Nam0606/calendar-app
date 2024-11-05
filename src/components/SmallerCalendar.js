@@ -43,6 +43,17 @@ const SmallerCalendar = () => {
       return "";
     }
   };
+  const isNotCurrentMonth = (day) => {
+    if (
+      dayjs(new Date(dayjs().year(), currentMonthIdx)).format(
+        "MMMM"
+      ) === day.format("MMMM")
+    ) {
+      return "";
+    } else {
+      return "gray";
+    }
+  };
   return (
     <div className="mt-9">
       <header className="flex justify-between ">
@@ -76,7 +87,9 @@ const SmallerCalendar = () => {
             {row.map((day, index) => (
               <button
                 key={index}
-                className={`py-1 w-full ${getCurrentDayClass(day)}`}
+                className={`py-1 w-full ${getCurrentDayClass(
+                  day
+                )} text-${isNotCurrentMonth(day)}-400`}
                 onClick={() => {
                   setSmallCalendarMonth(currentMonthIdx);
                   setDaySelected(day);
