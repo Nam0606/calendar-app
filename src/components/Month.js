@@ -21,7 +21,7 @@ const Month = ({ month }) => {
     );
   };
   return (
-    <div className="h-[100%] w-[100%] bg-white z-10">
+    <div className="h-[100%] w-[100%] bg-white">
       <div className="flex items-center p-2">
         <button
           className="border border-[#99b5cd] rounded-xl py-2 px-4 mr-5 text-[#0d2941]"
