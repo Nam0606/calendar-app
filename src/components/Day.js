@@ -72,7 +72,7 @@ const Day = ({ day }) => {
             ""
           )
         )}
-        {dayEvents.length >= 2 && (
+        {dayEvents.length > 2 && (
           <div className="text-[12px] pl-1">
             and {dayEvents.length - 2} more
           </div>
