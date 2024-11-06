@@ -23,7 +23,7 @@ const SideBar = () => {
     setDayEvents(events);
   }, [savedEvents, daySelected]);
   return (
-    <aside className="border p-5 w-80 bg-white">
+    <aside className="border p-5 w-96 bg-white">
       <SmallerCalendar />
 
       <div className="flex justify-between items-center pt-10">
@@ -35,7 +35,7 @@ const SideBar = () => {
       <div className="text-gray-500 text-sm my-1">
         {daySelected.format("DD MMM")}
       </div>
-      <div>
+      <div className="overflow-auto h-[420px] pr-1">
         {dayEvents.map((event, i) => (
           <div
             key={i}
